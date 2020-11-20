@@ -8,9 +8,15 @@ import org.junit.jupiter.api.Test;
 
 public class SeleniumTest {
 	
+	private static String OS = System.getProperty("os.name").toLowerCase();
+	
 	static {
 		if (null == System.getProperty("webdriver.gecko.driver")) {
-			System.setProperty("webdriver.gecko.driver","/Applications/Firefox.app/Contents/MacOS/geckodriver");
+			if (OS.indexOf("win")>-1) {
+				System.setProperty("webdriver.gecko.driver","c:/tools/geckodriver.exe");
+			} else {
+				System.setProperty("webdriver.gecko.driver","/Applications/Firefox.app/Contents/MacOS/geckodriver");
+			}
 		}
 	}
 	
