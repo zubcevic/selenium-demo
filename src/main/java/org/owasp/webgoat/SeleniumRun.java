@@ -14,7 +14,7 @@ public class SeleniumRun {
 		}
 	}
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
     	
     	WebGoatSQLIntro sqlRun = new WebGoatSQLIntro(false);
 

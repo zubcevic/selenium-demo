@@ -23,7 +23,7 @@ public class SeleniumTest {
 	private static WebGoatSQLIntro sqlRun;
 
     @BeforeAll
-    public static void setUp() {
+    public static void setUp() throws Exception {
     	sqlRun = new WebGoatSQLIntro(true);
     	sqlRun.login("tester1", "password");
     }
@@ -39,7 +39,7 @@ public class SeleniumTest {
     }
     
     @Test
-    public void checkExercise() {
+    public void checkExercise() throws Exception {
     	sqlRun.exercise();
     }
 
